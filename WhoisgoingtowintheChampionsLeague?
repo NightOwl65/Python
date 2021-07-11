@@ -1,0 +1,17 @@
+userAnswer=""
+
+while userAnswer !="Spurs":
+                userAnswer = input ("Who is going to win the Champions League?")
+                
+                if userAnswer == "Spurs":
+                  print("Correct")
+               
+                if userAnswer == "Man City":
+                  print("They have to get ")
+
+                if userAnswer == "Arsenal":
+                  print("They're not even in the Champions League!")
+                
+                else:
+                      print("Wrong Answer; try again!")
+  

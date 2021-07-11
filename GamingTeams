@@ -1,0 +1,39 @@
+import random
+
+people = []
+while True:
+  addPersonToGroup = input("Enter a name:\n") #asks user to enter name
+  people.append(addPersonToGroup)
+  quitOrNo = input("Would you like to stop? y/n\n") #asks user if enough people for groups
+  if quitOrNo == "y":
+    groupNumber = 1
+    howManyGroups = int(input("How many groups are there? \n")) #asks user how many groups they want
+    for n in range (1, howManyGroups + 1):
+      groups = ["Group",groupNumber,": "]
+      groupNumber = groupNumber + 1 
+      groups = list((groups.copy()))
+    howManyPeople = len(people)
+    howManyPplInEachGroup = howManyPeople/howManyGroups
+    if howManyPeople <= howManyGroups:
+      print("Please try again.")#if the people don't divide exactly into the groups an error message may be produced
+    else:
+      if howManyPeople % howManyGroups != 0:
+        print("There will be uneven groups. Is that fine? y/n") #asks the user if uneven groups are acceptable
+        unevenGroupsConfirm = input("")
+        unevenGroups = True 
+        if unevenGroups == True:
+          print("")
+          leftoverPerson = random.choice(people)
+          leftoverPersonGroup = random.randint(1, howManyGroups)
+          groups[leftoverPersonGroup] = leftoverPerson
+          print("We have made the groups uneven.")
+          print("There will be one group with one extra person.")
+        if unevenGroups == False:
+          print("There will be",howManyPplInEachGroup,"people in each group.")
+      for i in range(1, howManyGroups + 1):
+        int(i)
+        personAddedToGroup = random.choice(people)
+        groups[i] = groups.append(personAddedToGroup) #adds person to group
+        people.remove(personAddedToGroup) #removes person from group
+        print(groups) #outputs groups
+        

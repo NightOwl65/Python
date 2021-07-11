@@ -1,0 +1,269 @@
+def login():
+    username="studentname"
+    password="studentpasssword"
+    print("Enter username : ")
+    answer1=input()
+    print("Enter password : ")
+    answer2=input()
+    if answer1==username and answer2==password:
+       print("Welcome to this GCSE Computer Science Test. Good Luck!")
+       menu()
+
+
+print("Welcome to this GCSE Computer Science Test. Good Luck!")
+
+def menu():
+    print("************MAIN MENU**************")
+    #time.sleep(1)
+    print()
+
+choice = input("""
+                      A: Start Quiz
+                      B: Learn
+                      C: Leave/Log Out
+
+                      Please enter your choice: """)
+
+
+
+if choice == "B" or choice =="b":
+                  def menu(): 
+		                  print("*********LEARN***********")
+                      #time.sleep(1) 
+		                  print()
+
+choice = input("""
+                      A: Computing Hardware (inputs,outputs andstorage)
+                      B: Computing Software (OS,utilities,Applications)
+											C: Von Neuman architecture
+											D: Memory
+									  	E: Storage
+
+                      Please enter your choice: """)
+
+if choice == "A" or choice =="a":
+ print("Computer hardware is the physical components that a computer system requires to function. It includes everything with a circuit board that operates within a PC or laptop; including the motherboard, graphics card, CPU (Central Processing Unit), ventilation fans, webcam, power supply, and so on. More info: https://uk.crucial.com/articles/pc-builders/what-is-computer-hardware")
+
+elif choice == "B" or choice =="b":
+ print("Software is a program that enables a computer to perform a specific task, as opposed to the physical components of the system (hardware). More info: http://arve0.github.io/example_lessons/python/lessons/Quiz/Quiz.html")
+
+elif choice == "C" or choice =="c":
+ print("Von Neumann architecture is the design upon which many general purpose computers are based. More info: https://www.bbc.co.uk/bitesize/guides/z7qqmsg/revision/6")
+
+elif choice == "D" or choice =="d":
+ print("Memory is the component of the computer that holds data and programs that are currently in use. More info: https://www.bbc.co.uk/bitesize/guides/zfssv9q/revision/1")
+
+elif choice == "E" or choice =="e":
+ print("Memory is a key component of a computer system that works in tandem with secondary storage. This allows the system to run instructions, while secondary storage retains data. Cloud storage allows data to be stored at a remote location online. More info: https://www.bbc.co.uk/bitesize/guides/zfssv9q/revision/2")
+
+
+
+elif choice == "C" or choice =="c":
+        print("Goodbye")
+
+
+
+
+elif choice == "A" or choice =="a":
+ print('Welcome. This is a 10 question Computer Science  quiz\n')
+name = input("Please enter your name:")
+print("Hello", name," Let's begin the quiz!")
+
+
+total = 0
+
+
+ans1 = input('What does RAM stand for?')
+choice = input("""
+                      A: Random Access Memory
+                      B: Random Authorization Mechanism
+											C: Remote Authorisation Mechanism
+											
+                      Please enter your choice: """)
+                      
+if choice == "A" or choice =="a":
+    total = total + 1
+    print('Question 1: Correct Answer!')
+else:
+    print('Question 1: Incorrect')
+
+
+
+
+ans2 = input('What is the permanent memory built into your computer called?')
+choice = input("""
+                      A: ROM
+                      B: RAM
+											C: CPU
+											
+                      Please enter your choice: """)
+                      
+if choice == "A" or choice =="a":
+    total = total + 1
+    print('Question 2: Correct Answer!')
+else:
+    print('Question 2: Incorrect')
+    
+    
+    
+    
+    ans3 = input('Types of software programs are called...')
+choice = input("""
+                      A: Logical programs
+                      B: Replicate programs
+											C: Application programs
+											
+                      Please enter your choice: """)
+                      
+if choice == "C" or choice =="c":
+    total = total + 1
+    print('Question 3: Correct Answer!')
+else:
+    print('Question 3: Incorrect')
+    
+    
+    
+    
+    ans4 = input('Bits are grouped into units of eight called...')
+choice = input("""
+                      A: Character
+                      B: Bytes
+											C: Icon
+											
+                      Please enter your choice: """)
+                      
+if choice == "B" or choice =="b":
+    total = total + 1
+    print('Question 4: Correct Answer!')
+else:
+    print('Question 4: Incorrect')
+    
+    
+    
+    
+    ans5 = input('The basic Von Neumann architecture is defined as one composed of...')
+choice = input("""
+                      A: a CPU, one memory space, an input unit and an output unit
+                      B: a CPU, two memory spaces, an input unit and an output unit
+											C: two CPUs, one memory space, an input unit and an output unit
+											
+                      Please enter your choice: """)
+                      
+if choice == "A" or choice =="a":
+    total = total + 1
+    print('Question 5: Correct Answer!')
+else:
+    print('Question 5: Incorrect')
+    
+    
+    
+    
+    ans6 = input('The small high speed storage areas within the memory and processor are known as...?')
+choice = input("""
+                      A: Cache
+                      B: Addresses
+											C: Registers
+											
+                      Please enter your choice: """)
+                      
+if choice == "A" or choice =="a":
+    total = total + 1
+    print('Question 6: Correct Answer!')
+else:
+    print('Question 6: Incorrect')
+    
+    
+    
+    
+    ans7 = input('RAM & ROM are known as what kind of memory?')
+choice = input("""
+                      A: Main Memory
+                      B: Registers
+											C: Secondary Storage
+											
+                      Please enter your choice: """)
+                      
+if choice == "A" or choice =="a":
+    total = total + 1
+    print('Question 7: Correct Answer!')
+else:
+    print('Question 7: Incorrect')
+    
+    
+    
+    
+    ans8 = input('Which one is NOT secondary storage?')
+choice = input("""
+                      A: Hard disk
+                      B: Cache
+											C: CD
+											
+                      Please enter your choice: """)
+                      
+if choice == "B" or choice =="b":
+    total = total + 1
+    print('Question 8: Correct Answer!')
+else:
+    print('Question 8: Incorrect')
+    
+    
+    
+    
+    ans9 = input('The purpose of ROM is to...')
+choice = input("""
+                      A: Provide backup storage
+                      B: Store application files
+											C: Store the BIOS instructions
+											
+                      Please enter your choice: """)
+                      
+if choice == "C" or choice =="c":
+    total = total + 1
+    print('Question 9: Correct Answer!')
+else:
+    print('Question 9: Incorrect')
+    
+    
+    
+    
+    ans10 = input('Why do computers have secondary storage?')
+choice = input("""
+                      A: Primary Storage might be full
+                      B: To give another option where to save files
+											C: Main memory is volatile
+											
+                      Please enter your choice: """)
+                      
+if choice == "C" or choice =="c":
+    total = total + 1
+    print('Question 10: Correct Answer!')
+else:
+    print('Question 10: Incorrect')
+    
+    
+    
+    
+
+print ("Your final score is:", total+".")
+if total < 5:
+    print("Better luck next time", name+"!")
+elif total < 10:
+    print("Good Try", name+"!")
+elif total == 10:
+    print("Perfect Score", name+"!")
+
+
+
+def menu():
+       print()
+choice = input("""
+                      A: Retry Quiz
+                      B: Save/Log Out
+
+                      Please enter your choice: """)
+
+if choice == "A" or choice =="a":
+ print("Hello again", name," This is a 10 question math quiz\n")
+elif choice == "B" or choice =="b":
+        print("Goodbye")
+   

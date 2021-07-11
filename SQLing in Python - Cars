@@ -1,0 +1,62 @@
+import sqlite3 as lite
+
+connectedDatabase = lite.connect('MyFirstPythonDB.db')
+
+with connectedDatabase:
+	current = connectedDatabase.cursor()
+	current.execute("DROP TABLE IF EXISTS Cars")
+	current.execute("CREATE TABLE Cars(CarID INT, CarName TEXT, Price INT, SalesID INT);")
+current.execute("INSERT INTO Cars VALUES(1,'Audi',52642,1)")
+current.execute("INSERT INTO Cars VALUES(2,'Mercedes',57127,1)")
+current.execute("INSERT INTO Cars VALUES(3,'Skoda',9000,2)")
+current.execute("INSERT INTO Cars VALUES(4,'Volvo',29000,1)")
+current.execute("INSERT INTO Cars VALUES(5,'Bentley',350000,2)")
+current.execute("INSERT INTO Cars VALUES(6,'Citroen',21000,3)")
+current.execute("INSERT INTO Cars VALUES(7,'Hummer',41400,1)")
+current.execute("INSERT INTO Cars VALUES(8,'Volkswagen',21600,3)")
+current.execute("INSERT INTO Cars VALUES(9,'Ford',20500,2)")
+current.execute("INSERT INTO Cars VALUES(10,'Vauxhall',31000,3)")
+current.execute("INSERT INTO Cars VALUES(11,'Renault',15000,2)")
+
+
+
+with connectedDatabase:
+	current = connectedDatabase.cursor()
+	current.execute("DROP TABLE IF EXISTS SalesReps")
+	current.execute("CREATE TABLE SalesReps(SaleID INT, RepName TEXT);")
+current.execute("INSERT INTO SalesReps VALUES(1,'John')")
+current.execute("INSERT INTO SalesReps VALUES(2,'Pauline')")
+current.execute("INSERT INTO SalesReps VALUES(3,'Sean')")
+
+
+current.execute("SELECT * FROM Cars")
+
+Cardata = current.fetchall()
+print("Cars table: ")
+for car in Cardata:
+	print(car)
+
+
+current.execute("SELECT * FROM SalesReps")
+
+SalesRepsdata = current.fetchall()
+print("SalesReps table: ")
+for sales in SalesRepsdata:
+	print(sales)
+
+
+current.execute("SELECT * FROM Cars WHERE SalesID=1")
+Cardata = current.fetchall()
+
+print("Cars table Query: ")
+for Cardata in Cardata:
+	print(Cardata)
+
+
+current.execute("SELECT CarName FROM Cars WHERE Price<50000")
+Cardata = current.fetchall()
+
+print("Cars table Query: ")
+for Cardata in Cardata:
+	print(Cardata)
+	

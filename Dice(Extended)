@@ -1,0 +1,12 @@
+import random
+dice=random.randint(1,6)
+
+print("You rolled a:",dice)
+computerdice=random.randint(1,6)
+print("and the computer rolled a:",computerdice)
+
+if dice>computerdice:
+        print("You win!")
+
+if dice<computerdice:
+        print("You lose :(")

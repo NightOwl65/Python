@@ -1,0 +1,150 @@
+def login():
+    username="studentname"
+    password="studentpasssword"
+    print("Enter username : ")
+    answer1=input()
+    print("Enter password : ")
+    answer2=input()
+    if answer1==username and answer2==password:
+       print("Welcome to Primary School Maths Test. Good Luck!")
+       menu()
+
+
+print("Welcome to Primary School Maths Test. Good Luck!")
+
+def menu():
+    print("************MAIN MENU**************")
+    #time.sleep(1)
+    print()
+
+choice = input("""
+                      A: Start Quiz
+                      B: Info/Test Rules
+                      C: Leave/Log Out
+
+                      Please enter your choice: """)
+
+if choice == "B" or choice =="b":
+        print("***Info/Test Rules***  You will be asked 10 Mathematics questions to test your knowledge in the subject. You will be awarded one point for every question.")
+elif choice == "C" or choice =="c":
+        print("Goodbye")
+
+elif choice == "A" or choice =="a":
+ print('Welcome. This is a 10 question math quiz\n')
+name = input("Please enter your name:")
+print("Hello", name," Let's begin the quiz!")
+
+
+total = 0
+
+ans1 = input('What is 2 squared?')
+
+if int(ans1) == 2*2:
+    total = total + 1
+    print('Question 1: Correct Answer!')
+else:
+    print('Question 1: Incorrect')
+
+
+ans2 = input('What is 8*9?')
+
+if int(ans2) == 72:
+    total = total + 1
+    print('Question 2: Correct Answer!')
+else:
+    print('Question 2: Incorrect')
+
+
+ans3 = input('What is 32/8')
+
+if int(ans3) == 4:
+    total = total + 1
+    print('Question 3: Correct Answer!')
+else:
+    print('Question 3: Incorrect')
+
+
+ans4 = input('What is 89*3?')
+
+if int(ans4) == 267:
+    total = total + 1
+    print('Question 4: Correct Answer!')
+else:
+    print('Question 4: Incorrect')
+
+
+ans5 = input('What is 932 - 354?')
+
+if int(ans5) == 578:
+    total = total + 1
+    print('Question 5: Correct Answer!')
+else:
+    print('Question 5: Incorrect')
+
+
+ans6 = input('What is 12*11?')
+
+if int(ans6) == 132:
+    total = total + 1
+    print('Question 6 Correct Answer!')
+else:
+    print('Question 6: Incorrect')
+
+
+ans7 = input('What is 715 + 1153?')
+
+if int(ans7) == 1868:
+    total = total + 1
+    print('Question 7: Correct Answer!')
+else:
+    print('Question 7: Incorrect')
+
+
+ans8 = input('What is 76*32?')
+
+if int(ans8) == 2432:
+    total = total + 1
+    print('Question 8: Correct Answer!')
+else:
+    print('Question 8: Incorrect')
+
+
+ans9 = input('What is 397*85?')
+
+if int(ans8) == 33745:
+    total = total + 1
+    print('Question 9: Correct Answer!')
+else:
+    print('Question 9: Incorrect')
+
+
+ans10 = input('What is 563 - 287?')
+
+if int(ans10) == 276:
+    total = total + 1
+    print('Question 10: Correct Answer!')
+else:
+    print('Question 10: Incorrect')
+    
+
+print ("Your final score is: total")
+if total < 5:
+    print("Better luck next time", name+"!")
+elif total < 10:
+    print("Good Try", name+"!")
+elif total == 10:
+    print("Perfect Score", name+"!")
+
+def menu():
+       print()
+
+choice = input("""
+                      A: Retry Quiz
+                      B: Save/Log Out
+
+                      Please enter your choice: """)
+
+if choice == "A" or choice =="a":
+ print("Hello again", name," This is a 10 question math quiz\n")
+elif choice == "B" or choice =="b":
+        print("Goodbye")

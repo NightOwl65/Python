@@ -1,0 +1,20 @@
+import random
+hero_health=10
+enemy_health=10
+while hero_health>0 and enemy_health>0
+  hero_hit=random.randnit(2,8)
+  print("Hero rolled a: ",hero_hit)
+  enemy_hit=random.randnit(1,5)
+  print("Enemy rolled a: ",enemy_hit)
+  if hero_hit>enemy_hit:
+    print("Hero hits the enemy")
+    enemy_health=enemy_health-hero_hit
+  else:
+    print("Enemy hits the hero")
+    hero_health=hero_health-enemy_hit
+  stop=input("press enter for next round")
+
+  if hero_health>0:
+    print("hero won")
+  else:
+    print("enemy won")

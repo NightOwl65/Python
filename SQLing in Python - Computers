@@ -1,0 +1,40 @@
+import sqlite3 as lite
+
+connectedDatabase = lite.connect('MyFirstPythonDB.db')
+
+with connectedDatabase:
+	current = connectedDatabase.cursor()
+	current.execute("DROP TABLE IF EXISTS Laptops")
+	current.execute("CREATE TABLE Laptops(ProductID INT, Manufacturer TEXT, Model TEXT, Processor TEXT, CPU Speed INT, RAM INT, Storage Capacity INT, GPU TEXT, Price INT);")
+current.execute("INSERT INTO Laptops VALUES(1,'ACER','Swift','AMD Ryzen',2.3,8,1,'No',599)")
+current.execute("INSERT INTO Laptops VALUES(2,'HP','Pavilion x360','Intel i3',3.6,4,0.25,'No',479)")
+current.execute("INSERT INTO Laptops VALUES(3,'Microsoft','Surface Go','Intel Pentium Gold',1.7,4,0.6,'No',399)")
+current.execute("INSERT INTO Laptops VALUES(4,'Dell','XPS','Intel i7',4.9,8,0.5,'Yes',899)")
+current.execute("INSERT INTO Laptops VALUES(5,'Apple','Macbook Air','Apple M1 Chip',3.2,8,0.25,'No',949)")
+current.execute("INSERT INTO Laptops VALUES(6,'Lenovo','IdeaPad','AMD 3020e',1.2,4,0.06,'No',199)")
+current.execute("INSERT INTO Laptops VALUES(7,'Microsoft','Surface Pro','Intel i5',3.7,8,0.12,'Yes',679)")
+current.execute("INSERT INTO Laptops VALUES(8,'Aple','Macbook Pro','Apple M1 Chip',3.2,8,0.25,'Yes',1152)")
+current.execute("INSERT INTO Laptops VALUES(9,'ASUS','C523','Intel Celeron',2.4,4,0.64,'No',259)")
+current.execute("INSERT INTO Laptops VALUES(10,'Dell','Inspiron','Intel Pentium Silver',3.1,4,0.128,'No',349)")
+
+
+
+with connectedDatabase:
+	current = connectedDatabase.cursor()
+	current.execute("DROP TABLE IF EXISTS Desktops")
+current.execute("CREATE TABLE Desktops(ProductID INT, Manufacturer TEXT, Model TEXT, Processor TEXT, CPU Speed INT, RAM INT, Storage Capacity INT, GPU TEXT, Price INT);")
+current.execute("INSERT INTO Laptops VALUES(1,'ACER','Swift','AMD Ryzen',2.3,8,1,'No',599)")
+current.execute("INSERT INTO Laptops VALUES(2,'HP','Pavilion x360','Intel i3',3.6,4,0.25,'No',479)")
+current.execute("INSERT INTO Laptops VALUES(3,'Microsoft','Surface Go','Intel Pentium Gold',1.7,4,0.6,'No',399)")
+current.execute("INSERT INTO Laptops VALUES(4,'Dell','XPS','Intel i7',4.9,8,0.5,'Yes',899)")
+current.execute("INSERT INTO Laptops VALUES(5,'Apple','Macbook Air','Apple M1 Chip',3.2,8,0.25,'No',949)")
+
+
+
+
+current.execute("SELECT Model FROM Laptops WHERE Manufacturer=Apple")
+Laptopdata = current.fetchall()
+
+print("Laptop table Query: ")
+for Laptopdata in Laptopdata:
+	print(Laptopdata)

@@ -1,0 +1,31 @@
+print("Welcome to Guess The Word")
+secretword = input("Player 1, please enter a word: ")
+print("Player 2, here are the number of letters in the word")
+print (len(secretword))
+count = 0
+LengthSecretWord = len(secretword)
+
+guess1 = input("Player 2, enter a letter as your first guess: ")
+for i in range(0,LengthSecretWord):
+	if guess1 == secretword[i]:
+		count = count + 1
+		print(guess1, "is in the secret word",count,"number of times")
+
+guess2 = input("Player 2, enter a letter as your second guess: ")
+for i in range(0,LengthSecretWord):
+	if guess2 == secretword[i]:
+		count = count + 1
+		print(guess2, "is in the secret word",count,"number of times")
+
+		guess3 = input("Player 2, enter a letter as your last guess: ")
+for i in range(0,LengthSecretWord):
+	if guess3 == secretword[i]:
+		count = count + 1
+		print(guess3, "is in the secret word",count,"number of times")
+
+PlayerGuess = input("Guess the word")
+if PlayerGuess:
+	print("Correct! Player 2 wins")
+else:
+	print("Wrong! Player 1 wins")
+	
